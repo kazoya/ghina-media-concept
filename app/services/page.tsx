@@ -20,7 +20,7 @@ export default function ServicesPage() {
             {services
               .filter((s) => s.group === g)
               .map((s) => (
-                <article key={s.id} className="flex flex-col rounded-2xl border border-line bg-paper p-6 transition hover:border-gold/50">
+                <article key={s.id} data-reveal data-spotlight className="card card-hover flex flex-col p-6">
                   <h3 className="text-lg font-bold">{s.ar}</h3>
                   <p className="text-xs text-muted" dir="ltr">
                     {s.en}

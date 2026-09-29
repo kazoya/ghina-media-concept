@@ -15,7 +15,7 @@ export default function DeveloperPage() {
           نقرة المستخدم.
         </p>
       </PageHead>
-      <div className="flex flex-col items-start gap-6 rounded-3xl border border-line bg-paper p-8 md:flex-row md:items-center">
+      <div className="card flex flex-col items-start gap-6 p-8 md:flex-row md:items-center">
         <DevQr />
         <div>
           <p className="text-lg font-bold">{developer.name}</p>

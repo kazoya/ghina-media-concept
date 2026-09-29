@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { AmmanClock } from "@/components/amman-clock";
 import { DevQr } from "@/components/qr";
 import { brand, developer, disclaimer, nav } from "@/lib/site";
 
@@ -27,6 +28,7 @@ export function SiteFooter() {
             </li>
             <li className="text-muted">{brand.addressAr}</li>
           </ul>
+          <AmmanClock className="mt-5 w-fit" />
         </div>
         <div className="text-sm">
           <p className="font-bold">المنصة</p>

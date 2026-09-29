@@ -38,8 +38,8 @@ export function Planner() {
   if (done && plan) {
     const msg = briefMessage(name.trim(), a, plan);
     return (
-      <div className="rise grid gap-6 lg:grid-cols-[1.4fr_1fr]">
-        <div className="rounded-3xl border border-line bg-paper p-6 md:p-8">
+      <div className="rise grid gap-6 lg:grid-cols-[1.4fr_1fr]" aria-live="polite">
+        <div className="card p-6 md:p-8">
           <p className="text-sm font-bold text-gold">توصيات أولية</p>
           <p className="mt-1 text-xs text-muted">
             ناتجة عن قواعد ثابتة تربط إجاباتك بخدمات غنى ميديا المنشورة — ليست تحليلاً بالذكاء الاصطناعي ولا تقييماً من الشركة.
@@ -63,7 +63,7 @@ export function Planner() {
           <h3 className="mt-8 font-bold">الخدمات المقترحة للنقاش</h3>
           <ul className="mt-3 grid gap-3 sm:grid-cols-2">
             {plan.services.map((s) => (
-              <li key={s.id} className="rounded-2xl border border-line bg-raised p-4">
+              <li key={s.id} className="rounded-2xl border border-line bg-bg/40 p-4">
                 <p className="flex items-center gap-2 font-bold">
                   <Check size={16} className="text-ok" aria-hidden /> {s.ar}
                 </p>
@@ -116,7 +116,7 @@ export function Planner() {
             href={waLink(msg)}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 rounded-full bg-gold px-6 py-3 font-bold text-bg transition hover:bg-gold-strong"
+            className="btn btn-primary w-full"
           >
             <MessageCircle size={18} aria-hidden /> افتح الرسالة في واتساب لإرسالها
           </a>
@@ -127,7 +127,7 @@ export function Planner() {
               setA(empty);
               setStep(0);
             }}
-            className="flex items-center justify-center gap-2 rounded-full border border-line px-6 py-3 text-sm text-muted hover:text-ink"
+            className="btn w-full border border-line text-sm font-normal text-muted hover:text-ink"
           >
             <RotateCcw size={16} aria-hidden /> ابدأ من جديد
           </button>
@@ -137,7 +137,7 @@ export function Planner() {
   }
 
   return (
-    <div className="rounded-3xl border border-line bg-paper p-6 md:p-10">
+    <div className="card p-6 md:p-10">
       <div className="flex items-center gap-2" aria-hidden>
         {order.map((k, i) => (
           <span key={k} className={`h-1.5 flex-1 rounded-full ${i <= step ? "bg-gold" : "bg-line"}`} />
@@ -158,7 +158,7 @@ export function Planner() {
               type="button"
               onClick={() => pick(opt)}
               aria-pressed={on}
-              className={`rounded-2xl border px-5 py-4 text-start transition ${on ? "border-gold bg-gold-soft text-gold-strong" : "border-line bg-raised hover:border-gold/60"}`}
+              className={`min-h-14 cursor-pointer rounded-2xl border px-5 py-4 text-start transition duration-200 active:scale-[0.98] ${on ? "border-gold bg-gold-soft text-gold-strong shadow-[0_0_0_1px_var(--c-gold)]" : "border-line bg-raised hover:border-line-strong hover:bg-gold-soft/40"}`}
             >
               {opt}
             </button>
@@ -167,7 +167,7 @@ export function Planner() {
       </div>
       <div className="mt-8 flex gap-3">
         {step > 0 && (
-          <button type="button" onClick={() => setStep(step - 1)} className="rounded-full border border-line px-5 py-2 text-sm text-muted hover:text-ink">
+          <button type="button" onClick={() => setStep(step - 1)} className="btn border border-line text-sm font-normal text-muted hover:text-ink">
             السابق
           </button>
         )}
@@ -176,7 +176,7 @@ export function Planner() {
             type="button"
             disabled={a.channels.length === 0}
             onClick={() => setStep(step + 1)}
-            className="rounded-full bg-gold px-6 py-2 text-sm font-bold text-bg disabled:opacity-40"
+            className="btn btn-primary text-sm"
           >
             التالي
           </button>

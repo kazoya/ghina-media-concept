@@ -22,9 +22,7 @@ export function Source({ page }: { page: string }) {
 }
 
 export function CtaLink({ href, children, ghost }: { href: string; children: React.ReactNode; ghost?: boolean }) {
-  const cls = ghost
-    ? "inline-flex items-center gap-2 rounded-full border border-gold/60 px-6 py-3 font-bold text-gold-strong transition hover:bg-gold-soft"
-    : "inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3 font-bold text-bg transition hover:bg-gold-strong";
+  const cls = ghost ? "btn btn-ghost" : "btn btn-primary";
   if (href.startsWith("http")) {
     return (
       <a href={href} target="_blank" rel="noopener noreferrer" className={cls}>

@@ -13,7 +13,7 @@ export default function TrainingPage() {
       </PageHead>
       <ol className="grid gap-3 md:grid-cols-2">
         {trainings.map((t, i) => (
-          <li key={t} className="flex items-start gap-4 rounded-2xl border border-line bg-paper p-5">
+          <li key={t} data-reveal className="card card-hover flex items-start gap-4 p-5">
             <span className="grid size-10 shrink-0 place-items-center rounded-full bg-gold-soft text-sm font-bold text-gold-strong">{i + 1}</span>
             <span className="pt-2 leading-7">{t}</span>
           </li>

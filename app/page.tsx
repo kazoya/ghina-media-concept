@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, Compass, GraduationCap, Handshake, Sparkles } from "lucide-react";
+import { HeroParticles } from "@/components/hero-particles";
 import { CtaLink } from "@/components/ui";
 import { activities, brand, groups, published, services, trainings, waLink } from "@/lib/site";
 
@@ -20,13 +21,14 @@ const partners = [
 export default function Home() {
   return (
     <>
-      <section className="grain -mx-4 rounded-b-[2.5rem] px-4 pb-16 pt-10 md:pt-16">
-        <div className="grid items-center gap-10 md:grid-cols-[1.3fr_1fr]">
+      <section className="grain relative -mx-4 -mt-8 overflow-hidden rounded-b-[2.5rem] border-b border-line px-4 pb-16 pt-14 md:pt-20">
+        <HeroParticles />
+        <div className="relative grid items-center gap-10 md:grid-cols-[1.3fr_1fr]">
           <div>
-            <p className="rise inline-flex items-center gap-2 rounded-full border border-gold/40 px-3 py-1 text-xs font-bold text-gold-strong">
+            <p className="rise inline-flex items-center gap-2 rounded-full border border-gold/40 bg-bg/60 px-3 py-1 text-xs font-bold text-gold-strong backdrop-blur">
               <Sparkles size={14} aria-hidden /> وكالة تسويق رقمي وتدريب · إربد، الأردن
             </p>
-            <h1 className="rise rise-2 mt-5 text-4xl font-bold leading-[1.35] md:text-6xl">
+            <h1 className="rise rise-2 mt-5 text-4xl font-bold leading-[1.35] md:text-6xl md:leading-[1.3]">
               تسويق رقمي <span className="gold-text">يتحوّل إلى طلبات</span>، لا إلى إعجابات فقط.
             </h1>
             <p className="rise rise-3 mt-5 max-w-xl text-lg leading-9 text-muted">
@@ -49,8 +51,8 @@ export default function Home() {
               { n: `${activities.length}`, l: "نشاطاً وشراكة موثّقة" },
               { n: "+10", l: "سنوات خبرة (كما نُشر)" },
             ].map((s) => (
-              <div key={s.l} className="rounded-2xl border border-line bg-paper/80 p-5">
-                <p className="gold-text text-4xl font-bold">{s.n}</p>
+              <div key={s.l} data-spotlight className="card card-hover p-5">
+                <p className="gold-text text-4xl font-bold tabular-nums">{s.n}</p>
                 <p className="mt-1 text-sm text-muted">{s.l}</p>
               </div>
             ))}
@@ -59,44 +61,48 @@ export default function Home() {
         </div>
       </section>
 
-      <section aria-label="جهات وبرامج مذكورة في صفحتي التدريب والأنشطة" className="-mx-4 overflow-hidden border-y border-line bg-paper py-4">
-        <div className="marquee flex w-max gap-10 whitespace-nowrap text-muted">
-          {[...partners, ...partners].map((p, i) => (
-            <span key={i} className="text-sm">
+      <section aria-labelledby="partners" className="mt-12" data-reveal>
+        <h2 id="partners" className="text-center text-sm font-bold text-muted">
+          جهات وبرامج مذكورة في صفحتي التدريب والأنشطة
+        </h2>
+        <ul className="mt-4 flex flex-wrap justify-center gap-2">
+          {partners.map((p) => (
+            <li key={p} className="rounded-full border border-line bg-paper px-4 py-1.5 text-sm text-ink/85 transition-colors hover:border-line-strong">
               {p}
-            </span>
+            </li>
           ))}
-        </div>
+        </ul>
       </section>
 
-      <section className="mt-16 grid items-center gap-10 md:grid-cols-[1fr_1.4fr]" aria-labelledby="founder">
-        <Image
-          src="/ghina-fahmawi.webp"
-          alt={`${brand.lead}، مؤسسة غنى ميديا`}
-          width={720}
-          height={720}
-          sizes="(min-width: 768px) 380px, 80vw"
-          className="mx-auto w-4/5 max-w-sm drop-shadow-[0_20px_40px_rgb(196_149_106/0.25)] md:w-full"
-        />
-        <div>
+      <section id="founder" className="mt-20 grid scroll-mt-24 items-center gap-10 md:grid-cols-[1fr_1.4fr]" aria-labelledby="founder-title">
+        <div data-reveal className="relative mx-auto w-4/5 max-w-sm md:w-full">
+          <div aria-hidden className="absolute inset-[12%] rounded-full bg-gold/20 blur-3xl" />
+          <Image
+            src="/ghina-fahmawi.webp"
+            alt={`${brand.lead}، مؤسسة غنى ميديا`}
+            width={720}
+            height={720}
+            sizes="(min-width: 768px) 380px, 80vw"
+            className="relative w-full"
+          />
+        </div>
+        <div data-reveal style={{ "--i": 1 } as React.CSSProperties}>
           <p className="text-sm font-bold text-gold">من وراء غنى ميديا</p>
-          <h2 id="founder" className="mt-2 text-3xl font-bold">
+          <h2 id="founder-title" className="mt-2 text-3xl font-bold">
             {brand.lead}
           </h2>
           <p className="mt-1 text-muted">مؤسسة غنى ميديا · مدرّبة تسويق رقمي</p>
           <ul className="mt-6 grid gap-3 leading-8">
-            <li className="flex gap-3">
-              <span className="mt-3 size-1.5 shrink-0 rounded-full bg-gold" aria-hidden />
-              {published.experience}.
-            </li>
-            <li className="flex gap-3">
-              <span className="mt-3 size-1.5 shrink-0 rounded-full bg-gold" aria-hidden />
-              {published.meta}
-            </li>
-            <li className="flex gap-3">
-              <span className="mt-3 size-1.5 shrink-0 rounded-full bg-gold" aria-hidden />
-              قدّمت تدريباً في برامج وجهات منها Boost With Meta وجامعة العلوم والتكنولوجيا ومؤسسة عبد الحميد شومان.
-            </li>
+            {[
+              `${published.experience}.`,
+              published.meta,
+              "قدّمت تدريباً في برامج وجهات منها Boost With Meta وجامعة العلوم والتكنولوجيا ومؤسسة عبد الحميد شومان.",
+            ].map((t) => (
+              <li key={t} className="flex gap-3">
+                <span className="mt-3 size-1.5 shrink-0 rounded-full bg-gold" aria-hidden />
+                {t}
+              </li>
+            ))}
           </ul>
           <div className="mt-8">
             <CtaLink href={waLink(`مرحباً ${brand.lead}، رأيت المنصة وأرغب بمكالمة قصيرة.`)}>تحدّث مع غنى مباشرة</CtaLink>
@@ -104,8 +110,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mt-16">
-        <h2 className="text-2xl font-bold">لماذا يتصل بك صاحب المشروع اليوم؟</h2>
+      <section className="mt-20">
+        <h2 className="text-2xl font-bold" data-reveal>
+          لماذا يتصل بك صاحب المشروع اليوم؟
+        </h2>
         <div className="mt-6 grid gap-4 md:grid-cols-3">
           {[
             {
@@ -123,9 +131,11 @@ export default function Home() {
               t: "حضور حقيقي في منظومة الريادة",
               d: "شراكات ومذكرات تفاهم مع جامعات ومؤسسات تمكين وريادة — منشورة بالاسم في صفحة الأنشطة.",
             },
-          ].map((c) => (
-            <article key={c.t} className="rounded-2xl border border-line bg-paper p-6 transition hover:border-gold/50">
-              <c.icon className="text-gold" size={28} aria-hidden />
+          ].map((c, i) => (
+            <article key={c.t} data-reveal data-spotlight style={{ "--i": i } as React.CSSProperties} className="card card-hover p-6">
+              <span className="grid size-12 place-items-center rounded-2xl bg-gold-soft">
+                <c.icon className="text-gold-strong" size={24} aria-hidden />
+              </span>
               <h3 className="mt-4 text-lg font-bold">{c.t}</h3>
               <p className="mt-2 text-sm leading-7 text-muted">{c.d}</p>
             </article>
@@ -133,16 +143,16 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mt-16">
-        <div className="flex items-end justify-between gap-4">
+      <section className="mt-20">
+        <div className="flex items-end justify-between gap-4" data-reveal>
           <h2 className="text-2xl font-bold">الخدمات في ثلاث مسارات</h2>
-          <Link href="/services" className="text-sm font-bold text-gold-strong hover:underline">
-            كل الخدمات
+          <Link href="/services" className="inline-flex min-h-11 items-center text-sm font-bold text-gold-strong hover:underline">
+            كل الخدمات ←
           </Link>
         </div>
         <div className="mt-6 grid gap-4 md:grid-cols-3">
-          {(Object.keys(groups) as (keyof typeof groups)[]).map((g) => (
-            <div key={g} className="rounded-2xl border border-line bg-raised p-6">
+          {(Object.keys(groups) as (keyof typeof groups)[]).map((g, i) => (
+            <div key={g} data-reveal data-spotlight style={{ "--i": i } as React.CSSProperties} className="card card-hover p-6">
               <p className="font-bold text-gold-strong">{groups[g]}</p>
               <ul className="mt-3 grid gap-2 text-sm">
                 {services
@@ -159,29 +169,32 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mt-16 grid gap-6 rounded-3xl border border-line bg-paper p-8 md:grid-cols-2">
+      <section data-reveal className="card mt-20 grid gap-8 p-8 md:grid-cols-2">
         <div>
           <p className="text-sm font-bold text-gold">الرؤية</p>
           <p className="mt-2 leading-8">{published.vision}</p>
         </div>
-        <div>
+        <div className="md:border-s md:border-line md:ps-8">
           <p className="text-sm font-bold text-gold">الرسالة</p>
           <p className="mt-2 leading-8">{published.mission}</p>
         </div>
       </section>
 
-      <section className="mt-16 rounded-3xl bg-gold p-8 text-bg md:p-12">
-        <h2 className="text-2xl font-bold md:text-3xl">مكالمة واحدة تكفي لتعرف من أين تبدأ.</h2>
-        <p className="mt-3 max-w-2xl leading-8">
-          العرض والسعر تحددهما غنى ميديا مباشرة — هذه المنصة التجريبية لا تسعّر شيئاً ولا تتحدث باسم الشركة.
-        </p>
-        <div className="mt-6 flex flex-wrap gap-3">
-          <a href={brand.whatsappUrl} target="_blank" rel="noopener noreferrer" className="rounded-full bg-bg px-6 py-3 font-bold text-gold-strong">
-            واتساب غنى ميديا
-          </a>
-          <a href={`mailto:${brand.email}`} className="rounded-full border border-bg/40 px-6 py-3 font-bold">
-            {brand.email}
-          </a>
+      <section data-reveal className="relative mt-20 overflow-hidden rounded-3xl bg-gold p-8 text-bg md:p-12">
+        <div aria-hidden className="absolute -start-24 -top-24 size-72 rounded-full bg-gold-strong/60 blur-3xl" />
+        <div className="relative">
+          <h2 className="text-2xl font-bold md:text-3xl">مكالمة واحدة تكفي لتعرف من أين تبدأ.</h2>
+          <p className="mt-3 max-w-2xl leading-8">
+            العرض والسعر تحددهما غنى ميديا مباشرة — هذه المنصة التجريبية لا تسعّر شيئاً ولا تتحدث باسم الشركة.
+          </p>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <a href={brand.whatsappUrl} target="_blank" rel="noopener noreferrer" className="btn bg-bg text-gold-strong hover:bg-raised">
+              واتساب غنى ميديا
+            </a>
+            <a href={`mailto:${brand.email}`} className="btn border border-bg/40 hover:bg-bg/10">
+              {brand.email}
+            </a>
+          </div>
         </div>
       </section>
     </>

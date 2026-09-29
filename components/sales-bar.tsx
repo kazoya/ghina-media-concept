@@ -11,13 +11,13 @@ export function SalesBar() {
             href={waLink("مرحباً غنى ميديا، أرغب بمكالمة قصيرة حول التسويق الرقمي لمشروعي.")}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-1 items-center justify-center gap-2 rounded-full bg-gold px-5 py-2 text-sm font-bold text-bg md:flex-none"
+            className="btn btn-primary flex-1 py-2 text-sm md:flex-none"
           >
             <MessageCircle size={16} aria-hidden /> واتساب
           </a>
           <a
             href={brand.tel}
-            className="flex flex-1 items-center justify-center gap-2 rounded-full border border-gold/60 px-5 py-2 text-sm font-bold text-gold-strong md:flex-none"
+            className="btn btn-ghost flex-1 py-2 text-sm md:flex-none"
           >
             <Phone size={16} aria-hidden /> <span className="md:hidden">اتصال</span><span className="hidden md:inline" dir="ltr">{brand.phoneDisplay}</span>
           </a>

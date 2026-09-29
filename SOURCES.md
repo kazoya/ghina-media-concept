@@ -33,3 +33,15 @@ The company's logo and website images are **not** included in this repository. T
 
 `public/ghina-fahmawi.webp`: portrait supplied by the project owner on 2026-09-29 for this concept (resized to 720px WebP). It is not taken from ghinamedia.com. Remove it if the pictured person does not approve its use.
 The Droid Arabic Kufi font files (`app/fonts/`) are licensed under the Apache License 2.0.
+
+## Code reused and adapted
+
+Adapted (not copied verbatim) from a local reference project, `C:\apcasystems`, which was only read:
+
+| Here | Adapted from | Notes |
+|---|---|---|
+| `components/hero-particles.tsx` | `js/nodes.js` + `js/apca-particles.js` | nodes.js — Copyright (C) 2018 Oğuzhan Eroğlu, MIT License, https://github.com/rohanrhu/nodes.js. Rewritten as a React canvas: fewer nodes, slower drift, pauses off-screen and in hidden tabs, pointer push on mouse devices only, a single static frame under `prefers-reduced-motion`. |
+| `components/amman-clock.tsx` | `initDigitalClock` in `apca-script.js` | Same `Intl` + `Asia/Amman` approach; rebuilt with `useSyncExternalStore` (no hydration mismatch, one shared timer cleared when the last clock unmounts), Arabic date. |
+| `components/interactions.tsx` | `initScrollReveal` and the scrolled-header idea in `initNavigation` (`apca-script.js`) | IntersectionObserver reveal; content stays visible without JavaScript and under reduced motion. |
+
+No configuration, data, images, texts or client names from that project were used.

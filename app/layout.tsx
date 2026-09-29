@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
+import { Interactions } from "@/components/interactions";
 import { SalesBar } from "@/components/sales-bar";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
@@ -26,7 +27,11 @@ export const viewport: Viewport = { themeColor: "#110f0d" };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="ar" dir="rtl" className={kufi.variable}>
+    <html lang="ar" dir="rtl" className={kufi.variable} suppressHydrationWarning>
+      <head>
+        {/* يُفعَّل الصنف js قبل الرسم ليُخفى محتوى الظهور الناعم فقط حين يعمل JavaScript */}
+        <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
+      </head>
       <body className="min-h-screen font-sans antialiased">
         <a
           href="#main"
@@ -46,6 +51,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </main>
         <SiteFooter />
         <SalesBar />
+        <Interactions />
       </body>
     </html>
   );

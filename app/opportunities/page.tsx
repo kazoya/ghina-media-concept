@@ -60,7 +60,7 @@ export default function OpportunitiesPage() {
       </PageHead>
       <div className="grid gap-4 md:grid-cols-2">
         {items.map((it) => (
-          <article key={it.t} className="rounded-2xl border border-line bg-paper p-6">
+          <article key={it.t} data-reveal data-spotlight className="card card-hover p-6">
             <it.icon className="text-gold" size={26} aria-hidden />
             <h2 className="mt-3 text-lg font-bold">{it.t}</h2>
             <dl className="mt-3 grid gap-2 text-sm leading-7">

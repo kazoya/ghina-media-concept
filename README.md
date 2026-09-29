@@ -12,6 +12,7 @@ It is **not** Ghina Media's official website, is not endorsed by the company, an
 - `/services`, `/training`, `/activities`, `/contact`: published content only
 - `/opportunities`: improvement ideas, each with a human approval gate
 - `/developer`: about this concept
+- Visual layer: Amman digital clock (`Asia/Amman`, Arabic date), a light particle background in the hero, cursor-following spotlight on selected cards (mouse only), soft scroll reveals — all disabled or static under `prefers-reduced-motion`, no animation libraries
 
 All data and its sources: [SOURCES.md](SOURCES.md).
 

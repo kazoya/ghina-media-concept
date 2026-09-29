@@ -32,7 +32,7 @@ export default function ContactPage() {
                 href={r.href}
                 target={r.href.startsWith("http") ? "_blank" : undefined}
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 rounded-2xl border border-line bg-paper p-5 transition hover:border-gold/60"
+                data-spotlight className="card card-hover flex min-h-16 items-center gap-4 p-5"
               >
                 <r.icon className="text-gold" aria-hidden />
                 <span className="text-sm text-muted">{r.l}</span>
@@ -49,14 +49,14 @@ export default function ContactPage() {
                 href={s.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-full border border-line px-4 py-2 text-sm hover:border-gold/60 hover:text-gold-strong"
+                className="btn btn-ghost py-2 text-sm"
               >
                 {s.label}
               </a>
             ))}
           </li>
         </ul>
-        <div className="grid place-items-center rounded-3xl border border-line bg-raised p-8">
+        <div className="card grid place-items-center p-8">
           <BrandQr />
         </div>
       </div>

@@ -23,7 +23,7 @@ export default function ActivitiesPage() {
               {activities
                 .filter((a) => a.tag === tag)
                 .map((a) => (
-                  <li key={a.text} className="rounded-2xl border border-line bg-paper p-5 leading-8">
+                  <li key={a.text} data-reveal data-spotlight className="card card-hover p-5 leading-8">
                     {a.text}
                   </li>
                 ))}
