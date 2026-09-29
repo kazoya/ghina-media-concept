@@ -1,0 +1,114 @@
+{
+  "label": "baseline",
+  "base": "http://localhost:3457",
+  "when": "2026-09-29T14:07:32.811Z",
+  "tool": "lighthouse@12 (mobile default: Moto G Power emulation, simulated slow 4G), Chrome stable, local next start",
+  "routes": {
+    "/": {
+      "median": {
+        "performance": 96,
+        "accessibility": 100,
+        "bestPractices": 100,
+        "lcpMs": 2740,
+        "cls": 0,
+        "tbtMs": 17,
+        "scriptKiB": 159.2
+      },
+      "runs": [
+        {
+          "performance": 96,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "lcpMs": 2711,
+          "cls": 0,
+          "tbtMs": 13,
+          "scriptKiB": 159.2
+        },
+        {
+          "performance": 96,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "lcpMs": 2762,
+          "cls": 0,
+          "tbtMs": 26,
+          "scriptKiB": 159.2
+        },
+        {
+          "performance": 96,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "lcpMs": 2740,
+          "cls": 0,
+          "tbtMs": 17,
+          "scriptKiB": 159.2
+        }
+      ]
+    },
+    "/planner": {
+      "median": {
+        "performance": 97,
+        "accessibility": 100,
+        "bestPractices": 100,
+        "lcpMs": 2642,
+        "cls": 0,
+        "tbtMs": 36,
+        "scriptKiB": 159.2
+      },
+      "runs": [
+        {
+          "performance": 97,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "lcpMs": 2642,
+          "cls": 0,
+          "tbtMs": 37,
+          "scriptKiB": 159.2
+        },
+        {
+          "performance": 97,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "lcpMs": 2642,
+          "cls": 0,
+          "tbtMs": 36,
+          "scriptKiB": 159.2
+        },
+        {
+          "performance": 97,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "lcpMs": 2642,
+          "cls": 0,
+          "tbtMs": 36,
+          "scriptKiB": 159.2
+        }
+      ]
+    }
+  },
+  "axe": {
+    "/": {
+      "criticalSerious": [],
+      "minorModerate": []
+    },
+    "/planner": {
+      "criticalSerious": [],
+      "minorModerate": []
+    },
+    "/services": {
+      "criticalSerious": [],
+      "minorModerate": []
+    },
+    "/training": {
+      "criticalSerious": [],
+      "minorModerate": []
+    },
+    "/activities": {
+      "criticalSerious": [],
+      "minorModerate": []
+    },
+    "/contact": {
+      "criticalSerious": [],
+      "minorModerate": []
+    }
+  }
+}

@@ -9,8 +9,8 @@ import "./globals.css";
 
 const kufi = localFont({
   src: [
-    { path: "./fonts/DroidArabicKufi-Regular.ttf", weight: "400", style: "normal" },
-    { path: "./fonts/DroidArabicKufi-Bold.ttf", weight: "700", style: "normal" },
+    { path: "./fonts/DroidArabicKufi-Regular.woff2", weight: "400", style: "normal" },
+    { path: "./fonts/DroidArabicKufi-Bold.woff2", weight: "700", style: "normal" },
   ],
   variable: "--font-kufi",
   display: "swap",
@@ -39,7 +39,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         >
           تخطَّ إلى المحتوى
         </a>
-        <div role="note" className="bg-gold px-4 py-1.5 text-center text-xs font-bold text-bg">
+        <div role="note" data-print-hide className="bg-gold px-4 py-1.5 text-center text-xs font-bold text-bg">
           {disclaimer} ·{" "}
           <a href="https://ghinamedia.com" target="_blank" rel="noopener noreferrer" className="underline">
             الموقع الرسمي: ghinamedia.com

@@ -55,3 +55,6 @@ build.fail
 /files/*.zip
 
 .vercel
+
+# e2e artifacts
+/tests/e2e/artifacts/

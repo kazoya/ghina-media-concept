@@ -1,6 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, Compass, GraduationCap, Handshake, Sparkles } from "lucide-react";
+import { ArrowLeft, Compass, GraduationCap, Handshake, Palette, Sparkles, Target } from "lucide-react";
+import { businessLabel, channelLabel, goalLabel, teamLabel } from "@/lib/planner/dict";
+import { buildPlan } from "@/lib/planner/rules";
+import type { AnswersV1 } from "@/lib/planner/types";
 import { HeroParticles } from "@/components/hero-particles";
 import { CtaLink } from "@/components/ui";
 import { activities, brand, groups, published, services, trainings, waLink } from "@/lib/site";
@@ -17,6 +20,16 @@ const partners = [
   "Foras Palestine",
   "مركز الملكة رانيا للريادة",
 ];
+
+const gates = [
+  { goal: "leads", icon: Target, title: "أريد طلبات أكثر", sub: "إعلانات بحث، تواصل اجتماعي، ومسار طلب واضح إلى واتساب." },
+  { goal: "identity", icon: Palette, title: "أريد هوية ومحتوى", sub: "تصميم وتصوير ومحتوى متسق يعكس جودة ما تقدمه." },
+  { goal: "training", icon: GraduationCap, title: "أريد تدريب فريقي", sub: "ورش عملية وتحضير لشهادات Meta ليدير فريقك بنفسه." },
+] as const;
+
+const sampleAnswers: AnswersV1 = { schemaVersion: 1, businessId: "ecommerce", goalId: "leads", channelIds: ["instagram"], teamId: "solo", timelineId: "month" };
+const sample = buildPlan(sampleAnswers);
+const sampleLine = [businessLabel[sampleAnswers.businessId], goalLabel[sampleAnswers.goalId], `قنواته: ${channelLabel.instagram}`, teamLabel[sampleAnswers.teamId]].join("، ");
 
 export default function Home() {
   return (
@@ -37,7 +50,7 @@ export default function Home() {
             </p>
             <div className="rise rise-3 mt-8 flex flex-wrap gap-3">
               <CtaLink href="/planner">
-                خطّط حملتك في دقيقة <ArrowLeft size={18} aria-hidden />
+                ابدأ خطة نموك <ArrowLeft size={18} aria-hidden />
               </CtaLink>
               <CtaLink href={waLink("مرحباً غنى ميديا، رأيت المنصة وأرغب بمكالمة اليوم.")} ghost>
                 تحدّث مع غنى الآن
@@ -72,6 +85,68 @@ export default function Home() {
             </li>
           ))}
         </ul>
+      </section>
+
+      <section aria-labelledby="gates" className="mt-20">
+        <h2 id="gates" className="text-2xl font-bold" data-reveal>
+          من أين تبدأ؟
+        </h2>
+        <p className="mt-2 text-muted" data-reveal>
+          اختر ما تريده الآن، وسيبدأ الاستوديو بهذا الهدف.
+        </p>
+        <div className="mt-6 grid gap-4 md:grid-cols-3">
+          {gates.map((g, i) => (
+            <Link
+              key={g.goal}
+              href={`/planner?goal=${g.goal}`}
+              data-gate={g.goal}
+              data-reveal
+              data-spotlight
+              style={{ "--i": i } as React.CSSProperties}
+              className="card card-hover group flex min-h-40 flex-col p-6"
+            >
+              <span className="grid size-12 place-items-center rounded-2xl bg-gold-soft">
+                <g.icon className="text-gold-strong" size={24} aria-hidden />
+              </span>
+              <span className="mt-4 text-lg font-bold">{g.title}</span>
+              <span className="mt-1 text-sm leading-7 text-muted">{g.sub}</span>
+              <span className="mt-auto inline-flex items-center gap-1 pt-4 text-sm font-bold text-gold-strong">
+                ابدأ من هنا <ArrowLeft size={16} className="transition-transform duration-200 group-hover:-translate-x-1" aria-hidden />
+              </span>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <section aria-labelledby="sample" className="mt-20" data-reveal>
+        <div className="card overflow-hidden">
+          <div className="grid gap-8 p-6 md:grid-cols-[1fr_1.3fr] md:p-8">
+            <div>
+              <p className="inline-block rounded-full bg-gold-soft px-3 py-1 text-xs font-bold text-gold-strong">مثال توضيحي — بيانات افتراضية</p>
+              <h2 id="sample" className="mt-3 text-2xl font-bold">
+                هكذا يبدو ناتج الاستوديو
+              </h2>
+              <p className="mt-3 text-sm leading-7 text-muted">
+                لزائر افتراضي: {sampleLine}. التوصيات أدناه ناتجة عن القواعد نفسها المستخدمة في الاستوديو، وكل سبب مرتبط بإجابة.
+              </p>
+              <div className="mt-6">
+                <CtaLink href="/planner">جرّبها على مشروعك</CtaLink>
+              </div>
+            </div>
+            <ol className="grid gap-3">
+              {sample.recommendations.map((r) => (
+                <li key={r.serviceId} className="rounded-2xl border border-line bg-bg/40 p-4">
+                  <p className="flex items-center gap-2 font-bold">
+                    <span className="grid size-7 place-items-center rounded-full bg-gold-soft text-xs text-gold-strong">{r.rank}</span>
+                    {services.find((x) => x.id === r.serviceId)?.ar}
+                    {r.tier === "optional" && <span className="text-xs font-normal text-muted">(اختيارية)</span>}
+                  </p>
+                  <p className="mt-2 text-sm leading-7 text-muted">{r.reasons[0]}</p>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </div>
       </section>
 
       <section id="founder" className="mt-20 grid scroll-mt-24 items-center gap-10 md:grid-cols-[1fr_1.4fr]" aria-labelledby="founder-title">

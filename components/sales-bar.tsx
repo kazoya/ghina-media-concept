@@ -3,7 +3,7 @@ import { brand, waLink } from "@/lib/site";
 
 export function SalesBar() {
   return (
-    <div className="fixed inset-x-0 bottom-0 z-40 border-t border-line bg-paper/95 backdrop-blur">
+    <div data-sales-bar className="fixed inset-x-0 bottom-0 z-40 border-t border-line bg-paper/95 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-2.5">
         <p className="hidden text-sm text-muted md:block">جاهز لخطة تسويق واضحة؟ غنى ميديا على بُعد رسالة.</p>
         <div className="flex w-full gap-2 md:w-auto">

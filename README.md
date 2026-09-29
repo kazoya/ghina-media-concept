@@ -8,13 +8,16 @@ It is **not** Ghina Media's official website, is not endorsed by the company, an
 ## What it contains
 
 - `/` home page with a direct WhatsApp and phone bar
-- `/planner`: five questions → initial recommendations from fixed rules (`lib/planner.ts`) → a prefilled WhatsApp message that the visitor sends themselves. There is no backend, no storage and no automatic pricing.
-- `/services`, `/training`, `/activities`, `/contact`: published content only
+- `/planner` — growth-plan studio: five questions → explained initial recommendations from fixed, versioned rules (each reason tied to an answer) → editable 30-day plan in four phases → editable content calendar (list, desktop grid) → brief: copy, print/save as PDF via the browser, JSON and CSV export, short WhatsApp message the visitor sends themselves → optional local drafts A/B, JSON import with validation, side-by-side comparison, full reset. No backend, no account, no automatic pricing.
+- `/services`: filterable explorer with "when do you need it" notes and a link into the planner
+- `/training`: three guided paths built only from published training topics, plus the published list
+- `/activities`: published activities grouped by the relationship their wording supports (signed agreement / speaker / event participation / meeting), each with its source, plus a clearly labelled illustrative work-story template
+- `/contact`: published contact details
 - `/opportunities`: improvement ideas, each with a human approval gate
 - `/developer`: about this concept
 - Visual layer: Amman digital clock (`Asia/Amman`, Arabic date), a light particle background in the hero, cursor-following spotlight on selected cards (mouse only), soft scroll reveals — all disabled or static under `prefers-reduced-motion`, no animation libraries
 
-All data and its sources: [SOURCES.md](SOURCES.md).
+All data and its sources: [SOURCES.md](SOURCES.md). Architecture, tests and evidence: [`docs/`](docs/).
 
 ## Stack
 
@@ -23,11 +26,13 @@ Next.js 16 App Router · React 19 · Tailwind CSS 4 · Droid Arabic Kufi (Apache
 ## Run
 
 ```
-npm install
+npm ci
 npm run lint
 npm run typecheck
+npm test
 npm run build
 npm start
+BASE=http://localhost:3000 npm run test:e2e   # after: npx playwright install chromium
 ```
 
 No environment variables are needed (see `.env.example`).

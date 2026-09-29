@@ -13,12 +13,14 @@ Nothing was taken from private sources. No client names, testimonials, metrics, 
 | Vision and mission (translated to Arabic) | https://ghinamedia.com/ |
 | 11 services | https://ghinamedia.com/services/ |
 | 13 training programmes (duplicates removed only) | https://ghinamedia.com/training-workshops/ |
-| 16 activities and partnerships (Arabic text as published, lightly shortened) | https://ghinamedia.com/our-activities/ |
+| 16 activities (Arabic text as published, lightly shortened), each tagged with the relationship its wording supports: signed agreement, speaker/guest, event participation, meeting | https://ghinamedia.com/our-activities/ |
 | Description of Ghina Fahmawi as founder and "المدربة في شركة ميتا" | https://ghinamedia.com/our-activities/ |
 
 ## Written for the concept (not claims about the company)
 
-- One-line descriptions of each service (a general explanation of what the service means).
+- One-line descriptions of each service and the "when do you need it / what you need / next step" notes (`serviceGuide`) — general explanations, not Ghina Media's official scope.
+- The three training paths (`trainingPaths`) — groupings of published training topics suggested by this concept, not programmes announced by Ghina Media.
+- The illustrative work story on `/activities` and the sample output on `/` — labelled as illustrative on the page.
 - The planner rules in `lib/planner.ts`: fixed, deterministic mappings from answers to published services. Its output is labelled as initial recommendations, not AI analysis.
 - The "opportunities" page: observations about the public site (for example, no booking or FAQ page found) phrased as suggestions, each with a human approval gate.
 
@@ -32,7 +34,7 @@ Nothing was taken from private sources. No client names, testimonials, metrics, 
 The company's logo and website images are **not** included in this repository. The header uses a text wordmark.
 
 `public/ghina-fahmawi.webp`: portrait supplied by the project owner on 2026-09-29 for this concept (resized to 720px WebP). It is not taken from ghinamedia.com. Remove it if the pictured person does not approve its use.
-The Droid Arabic Kufi font files (`app/fonts/`) are licensed under the Apache License 2.0.
+The Droid Arabic Kufi font files (`app/fonts/`) are licensed under the Apache License 2.0. They were converted from TTF to WOFF2 (same glyphs, fontTools) to reduce download size.
 
 ## Code reused and adapted
 
