@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, Compass, GraduationCap, Handshake, Sparkles } from "lucide-react";
 import { CtaLink } from "@/components/ui";
@@ -65,6 +66,41 @@ export default function Home() {
               {p}
             </span>
           ))}
+        </div>
+      </section>
+
+      <section className="mt-16 grid items-center gap-10 md:grid-cols-[1fr_1.4fr]" aria-labelledby="founder">
+        <Image
+          src="/ghina-fahmawi.webp"
+          alt={`${brand.lead}، مؤسسة غنى ميديا`}
+          width={720}
+          height={720}
+          sizes="(min-width: 768px) 380px, 80vw"
+          className="mx-auto w-4/5 max-w-sm drop-shadow-[0_20px_40px_rgb(196_149_106/0.25)] md:w-full"
+        />
+        <div>
+          <p className="text-sm font-bold text-gold">من وراء غنى ميديا</p>
+          <h2 id="founder" className="mt-2 text-3xl font-bold">
+            {brand.lead}
+          </h2>
+          <p className="mt-1 text-muted">مؤسسة غنى ميديا · مدرّبة تسويق رقمي</p>
+          <ul className="mt-6 grid gap-3 leading-8">
+            <li className="flex gap-3">
+              <span className="mt-3 size-1.5 shrink-0 rounded-full bg-gold" aria-hidden />
+              {published.experience}.
+            </li>
+            <li className="flex gap-3">
+              <span className="mt-3 size-1.5 shrink-0 rounded-full bg-gold" aria-hidden />
+              {published.meta}
+            </li>
+            <li className="flex gap-3">
+              <span className="mt-3 size-1.5 shrink-0 rounded-full bg-gold" aria-hidden />
+              قدّمت تدريباً في برامج وجهات منها Boost With Meta وجامعة العلوم والتكنولوجيا ومؤسسة عبد الحميد شومان.
+            </li>
+          </ul>
+          <div className="mt-8">
+            <CtaLink href={waLink(`مرحباً ${brand.lead}، رأيت المنصة وأرغب بمكالمة قصيرة.`)}>تحدّث مع غنى مباشرة</CtaLink>
+          </div>
         </div>
       </section>
 

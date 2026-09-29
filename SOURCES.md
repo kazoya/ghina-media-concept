@@ -29,5 +29,7 @@ Nothing was taken from private sources. No client names, testimonials, metrics, 
 
 ## Assets
 
-The company's logo and images are **not** included in this repository. The header uses a text wordmark.
+The company's logo and website images are **not** included in this repository. The header uses a text wordmark.
+
+`public/ghina-fahmawi.webp`: portrait supplied by the project owner on 2026-09-29 for this concept (resized to 720px WebP). It is not taken from ghinamedia.com. Remove it if the pictured person does not approve its use.
 The Droid Arabic Kufi font files (`app/fonts/`) are licensed under the Apache License 2.0.
