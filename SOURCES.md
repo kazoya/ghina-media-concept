@@ -34,7 +34,7 @@ Nothing was taken from private sources. No client names, testimonials, metrics, 
 The company's logo and website images are **not** included in this repository. The header uses a text wordmark.
 
 `public/ghina-fahmawi.webp`: portrait supplied by the project owner on 2026-09-29 for this concept (resized to 720px WebP). It is not taken from ghinamedia.com. Remove it if the pictured person does not approve its use.
-The Droid Arabic Kufi font files (`app/fonts/`) are licensed under the Apache License 2.0. They were converted from TTF to WOFF2 (same glyphs, fontTools) to reduce download size.
+The Droid Arabic Kufi font files (`app/fonts/`) are licensed under the Apache License 2.0. They were converted from TTF to WOFF2 and subset with fontTools to core Arabic (U+0621–065F, Arabic-Indic digits, Arabic punctuation, space, ZWNJ/ZWJ/LRM/RLM, ornate parentheses) with all OpenType layout features kept, to reduce download size (79 → 11.9 KiB per weight). See `docs/PERFORMANCE.md`.
 
 ## Code reused and adapted
 

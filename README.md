@@ -32,7 +32,11 @@ npm run typecheck
 npm test
 npm run build
 npm start
-BASE=http://localhost:3000 npm run test:e2e   # after: npx playwright install chromium
+npx playwright install chromium               # once
+BASE=http://localhost:3000 npm run test:e2e   # studio + site + visual suites
+BASE=http://localhost:3000 LABEL=my-run npm run measure   # Lighthouse ×3 + axe, validated runs
 ```
+
+All test and measurement tooling runs from this project's own dependencies.
 
 No environment variables are needed (see `.env.example`).

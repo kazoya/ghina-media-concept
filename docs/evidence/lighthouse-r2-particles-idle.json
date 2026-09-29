@@ -1,0 +1,207 @@
+{
+  "label": "r2-particles-idle",
+  "base": "http://localhost:3000",
+  "startedAt": "2026-09-29T15:05:36.606Z",
+  "preset": "Lighthouse mobile default (simulated throttling)",
+  "browser": "chromium-1243/chrome-win64",
+  "routes": {
+    "/": {
+      "median": {
+        "performance": 97,
+        "accessibility": 100,
+        "lcpMs": 2606,
+        "fcpMs": 905,
+        "cls": 0,
+        "tbtMs": 45,
+        "scriptKiB": 171.3
+      },
+      "lcpMsPerRun": [
+        2625,
+        2606,
+        2601
+      ],
+      "lcpElement": "body.min-h-screen > div.bg-gold «تصوّر تجريبي مستقل — غير تابع للموقع الرسمي · المو»",
+      "lcpPhasesRun1": {
+        "TTFB": 454,
+        "Load Delay": 0,
+        "Load Time": 0,
+        "Render Delay": 2171
+      },
+      "runs": [
+        {
+          "file": "runs/r2-particles-idle/home-1-1790694336607.json",
+          "fetchTime": "2026-09-29T15:05:38.608Z",
+          "lighthouse": "12.8.2",
+          "performance": 97,
+          "accessibility": 100,
+          "lcpMs": 2625,
+          "fcpMs": 907,
+          "cls": 0,
+          "tbtMs": 45,
+          "scriptKiB": 171.3,
+          "lcpElement": "body.min-h-screen > div.bg-gold «تصوّر تجريبي مستقل — غير تابع للموقع الرسمي · المو»",
+          "lcpPhases": {
+            "TTFB": 454,
+            "Load Delay": 0,
+            "Load Time": 0,
+            "Render Delay": 2171
+          }
+        },
+        {
+          "file": "runs/r2-particles-idle/home-2-1790694345988.json",
+          "fetchTime": "2026-09-29T15:05:47.745Z",
+          "lighthouse": "12.8.2",
+          "performance": 97,
+          "accessibility": 100,
+          "lcpMs": 2606,
+          "fcpMs": 904,
+          "cls": 0,
+          "tbtMs": 38,
+          "scriptKiB": 171.3,
+          "lcpElement": "body.min-h-screen > div.bg-gold «تصوّر تجريبي مستقل — غير تابع للموقع الرسمي · المو»",
+          "lcpPhases": {
+            "TTFB": 452,
+            "Load Delay": 0,
+            "Load Time": 0,
+            "Render Delay": 2154
+          }
+        },
+        {
+          "file": "runs/r2-particles-idle/home-3-1790694355060.json",
+          "fetchTime": "2026-09-29T15:05:56.771Z",
+          "lighthouse": "12.8.2",
+          "performance": 97,
+          "accessibility": 100,
+          "lcpMs": 2601,
+          "fcpMs": 905,
+          "cls": 0,
+          "tbtMs": 54,
+          "scriptKiB": 171.3,
+          "lcpElement": "body.min-h-screen > div.bg-gold «تصوّر تجريبي مستقل — غير تابع للموقع الرسمي · المو»",
+          "lcpPhases": {
+            "TTFB": 452,
+            "Load Delay": 0,
+            "Load Time": 0,
+            "Render Delay": 2149
+          }
+        }
+      ]
+    },
+    "/planner": {
+      "median": {
+        "performance": 97,
+        "accessibility": 100,
+        "lcpMs": 2512,
+        "fcpMs": 754,
+        "cls": 0,
+        "tbtMs": 56,
+        "scriptKiB": 171.3
+      },
+      "lcpMsPerRun": [
+        2521,
+        2512,
+        2506
+      ],
+      "lcpElement": "body.min-h-screen > div.bg-gold «تصوّر تجريبي مستقل — غير تابع للموقع الرسمي · المو»",
+      "lcpPhasesRun1": {
+        "TTFB": 452,
+        "Load Delay": 0,
+        "Load Time": 0,
+        "Render Delay": 2069
+      },
+      "runs": [
+        {
+          "file": "runs/r2-particles-idle/planner-1-1790694364111.json",
+          "fetchTime": "2026-09-29T15:06:05.869Z",
+          "lighthouse": "12.8.2",
+          "performance": 97,
+          "accessibility": 100,
+          "lcpMs": 2521,
+          "fcpMs": 754,
+          "cls": 0,
+          "tbtMs": 65,
+          "scriptKiB": 171.3,
+          "lcpElement": "body.min-h-screen > div.bg-gold «تصوّر تجريبي مستقل — غير تابع للموقع الرسمي · المو»",
+          "lcpPhases": {
+            "TTFB": 452,
+            "Load Delay": 0,
+            "Load Time": 0,
+            "Render Delay": 2069
+          }
+        },
+        {
+          "file": "runs/r2-particles-idle/planner-2-1790694372409.json",
+          "fetchTime": "2026-09-29T15:06:14.175Z",
+          "lighthouse": "12.8.2",
+          "performance": 97,
+          "accessibility": 100,
+          "lcpMs": 2512,
+          "fcpMs": 754,
+          "cls": 0,
+          "tbtMs": 56,
+          "scriptKiB": 171.3,
+          "lcpElement": "body.min-h-screen > div.bg-gold «تصوّر تجريبي مستقل — غير تابع للموقع الرسمي · المو»",
+          "lcpPhases": {
+            "TTFB": 452,
+            "Load Delay": 0,
+            "Load Time": 0,
+            "Render Delay": 2060
+          }
+        },
+        {
+          "file": "runs/r2-particles-idle/planner-3-1790694380807.json",
+          "fetchTime": "2026-09-29T15:06:22.519Z",
+          "lighthouse": "12.8.2",
+          "performance": 97,
+          "accessibility": 100,
+          "lcpMs": 2506,
+          "fcpMs": 753,
+          "cls": 0,
+          "tbtMs": 51,
+          "scriptKiB": 171.3,
+          "lcpElement": "body.min-h-screen > div.bg-gold «تصوّر تجريبي مستقل — غير تابع للموقع الرسمي · المو»",
+          "lcpPhases": {
+            "TTFB": 452,
+            "Load Delay": 0,
+            "Load Time": 0,
+            "Render Delay": 2054
+          }
+        }
+      ]
+    }
+  },
+  "axe": {
+    "/": {
+      "criticalSerious": [],
+      "other": []
+    },
+    "/planner": {
+      "criticalSerious": [],
+      "other": []
+    },
+    "/services": {
+      "criticalSerious": [],
+      "other": []
+    },
+    "/training": {
+      "criticalSerious": [],
+      "other": []
+    },
+    "/activities": {
+      "criticalSerious": [],
+      "other": []
+    },
+    "/contact": {
+      "criticalSerious": [],
+      "other": []
+    },
+    "/opportunities": {
+      "criticalSerious": [],
+      "other": []
+    },
+    "/developer": {
+      "criticalSerious": [],
+      "other": []
+    }
+  }
+}

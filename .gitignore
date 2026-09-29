@@ -58,3 +58,4 @@ build.fail
 
 # e2e artifacts
 /tests/e2e/artifacts/
+/docs/evidence/runs/

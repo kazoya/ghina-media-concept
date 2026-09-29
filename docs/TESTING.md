@@ -7,8 +7,11 @@ npm run typecheck
 npm test                      # logic: node:test over lib/planner (19 tests)
 npm run build && npx next start -p 3000
 npx playwright install chromium
-BASE=http://localhost:3000 npm run test:e2e   # 65 browser checks
+BASE=http://localhost:3000 npm run test:e2e   # studio (67) + site (134) + visual (43)
+BASE=http://localhost:3000 LABEL=x npm run measure   # Lighthouse ×3/route + axe on 8 pages
 ```
+
+Everything runs from this project's `devDependencies` (`playwright`, `@axe-core/playwright`, `lighthouse`, `chrome-launcher`); no other project or machine path is used.
 
 All external requests are blocked inside the e2e run: no WhatsApp message, email or third-party request is sent.
 
@@ -35,4 +38,8 @@ Each mutation was reverted and the suite returned to 19/19.
 5. Services filter and details, safe `?goal=` mapping (unknown value ignored), training paths, activities grouped by relationship with 16 source links, illustrative story label, home sample label, portrait and `#founder`, clock not live-announced.
 6. JavaScript disabled (static content visible, planner fallback with direct contact) and reduced motion (content visible immediately).
 
-Supplementary suites kept outside the repo (site-wide journey 134 checks, visual effects 43 checks) were re-run on the same builds.
+`tests/e2e/site.e2e.mjs` — every route on desktop and mobile: status, `lang/dir`, `noindex` meta + header, concept label, h1, overflow, navigation (incl. mobile menu), planner smoke, every link (internal 200, external allow-list), `robots.txt`, 404.
+
+`tests/e2e/visual.e2e.mjs` — Amman clock (format, time zone, Arabic date, ticking), particles canvas, cursor spotlight (mouse only), hover lift, native cursor, text selection, reveal, header shadow, 44 px targets, touch behaviour, reduced motion, no-JS, `#founder` lands on the photo, WCAG contrast of the palette.
+
+`scripts/measure.mjs` — see `PERFORMANCE.md` for the validation rules.

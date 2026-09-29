@@ -1,0 +1,207 @@
+{
+  "label": "r3-core-arabic-fonts",
+  "base": "http://localhost:3000",
+  "startedAt": "2026-09-29T15:07:27.767Z",
+  "preset": "Lighthouse mobile default (simulated throttling)",
+  "browser": "chromium-1243/chrome-win64",
+  "routes": {
+    "/": {
+      "median": {
+        "performance": 98,
+        "accessibility": 100,
+        "lcpMs": 2473,
+        "fcpMs": 904,
+        "cls": 0,
+        "tbtMs": 43,
+        "scriptKiB": 171.1
+      },
+      "lcpMsPerRun": [
+        2601,
+        2473,
+        2467
+      ],
+      "lcpElement": "body.min-h-screen > div.bg-gold «تصوّر تجريبي مستقل — غير تابع للموقع الرسمي · المو»",
+      "lcpPhasesRun1": {
+        "TTFB": 454,
+        "Load Delay": 0,
+        "Load Time": 0,
+        "Render Delay": 2147
+      },
+      "runs": [
+        {
+          "file": "runs/r3-core-arabic-fonts/home-1-1790694447767.json",
+          "fetchTime": "2026-09-29T15:07:29.751Z",
+          "lighthouse": "12.8.2",
+          "performance": 95,
+          "accessibility": 100,
+          "lcpMs": 2601,
+          "fcpMs": 908,
+          "cls": 0,
+          "tbtMs": 139,
+          "scriptKiB": 171.1,
+          "lcpElement": "body.min-h-screen > div.bg-gold «تصوّر تجريبي مستقل — غير تابع للموقع الرسمي · المو»",
+          "lcpPhases": {
+            "TTFB": 454,
+            "Load Delay": 0,
+            "Load Time": 0,
+            "Render Delay": 2147
+          }
+        },
+        {
+          "file": "runs/r3-core-arabic-fonts/home-2-1790694457228.json",
+          "fetchTime": "2026-09-29T15:07:38.989Z",
+          "lighthouse": "12.8.2",
+          "performance": 98,
+          "accessibility": 100,
+          "lcpMs": 2473,
+          "fcpMs": 904,
+          "cls": 0,
+          "tbtMs": 35,
+          "scriptKiB": 171.1,
+          "lcpElement": "body.min-h-screen > div.bg-gold «تصوّر تجريبي مستقل — غير تابع للموقع الرسمي · المو»",
+          "lcpPhases": {
+            "TTFB": 452,
+            "Load Delay": 0,
+            "Load Time": 0,
+            "Render Delay": 2021
+          }
+        },
+        {
+          "file": "runs/r3-core-arabic-fonts/home-3-1790694466358.json",
+          "fetchTime": "2026-09-29T15:07:48.123Z",
+          "lighthouse": "12.8.2",
+          "performance": 98,
+          "accessibility": 100,
+          "lcpMs": 2467,
+          "fcpMs": 904,
+          "cls": 0,
+          "tbtMs": 43,
+          "scriptKiB": 171.1,
+          "lcpElement": "body.min-h-screen > div.bg-gold «تصوّر تجريبي مستقل — غير تابع للموقع الرسمي · المو»",
+          "lcpPhases": {
+            "TTFB": 452,
+            "Load Delay": 0,
+            "Load Time": 0,
+            "Render Delay": 2015
+          }
+        }
+      ]
+    },
+    "/planner": {
+      "median": {
+        "performance": 98,
+        "accessibility": 100,
+        "lcpMs": 2366,
+        "fcpMs": 754,
+        "cls": 0,
+        "tbtMs": 30,
+        "scriptKiB": 171.1
+      },
+      "lcpMsPerRun": [
+        2510,
+        2357,
+        2366
+      ],
+      "lcpElement": "body.min-h-screen > div.bg-gold «تصوّر تجريبي مستقل — غير تابع للموقع الرسمي · المو»",
+      "lcpPhasesRun1": {
+        "TTFB": 452,
+        "Load Delay": 0,
+        "Load Time": 0,
+        "Render Delay": 2058
+      },
+      "runs": [
+        {
+          "file": "runs/r3-core-arabic-fonts/planner-1-1790694475396.json",
+          "fetchTime": "2026-09-29T15:07:57.161Z",
+          "lighthouse": "12.8.2",
+          "performance": 97,
+          "accessibility": 100,
+          "lcpMs": 2510,
+          "fcpMs": 755,
+          "cls": 0,
+          "tbtMs": 53,
+          "scriptKiB": 171.1,
+          "lcpElement": "body.min-h-screen > div.bg-gold «تصوّر تجريبي مستقل — غير تابع للموقع الرسمي · المو»",
+          "lcpPhases": {
+            "TTFB": 452,
+            "Load Delay": 0,
+            "Load Time": 0,
+            "Render Delay": 2058
+          }
+        },
+        {
+          "file": "runs/r3-core-arabic-fonts/planner-2-1790694483781.json",
+          "fetchTime": "2026-09-29T15:08:05.539Z",
+          "lighthouse": "12.8.2",
+          "performance": 98,
+          "accessibility": 100,
+          "lcpMs": 2357,
+          "fcpMs": 754,
+          "cls": 0,
+          "tbtMs": 26,
+          "scriptKiB": 171.1,
+          "lcpElement": "body.min-h-screen > div.bg-gold «تصوّر تجريبي مستقل — غير تابع للموقع الرسمي · المو»",
+          "lcpPhases": {
+            "TTFB": 452,
+            "Load Delay": 0,
+            "Load Time": 0,
+            "Render Delay": 1905
+          }
+        },
+        {
+          "file": "runs/r3-core-arabic-fonts/planner-3-1790694492181.json",
+          "fetchTime": "2026-09-29T15:08:13.894Z",
+          "lighthouse": "12.8.2",
+          "performance": 98,
+          "accessibility": 100,
+          "lcpMs": 2366,
+          "fcpMs": 754,
+          "cls": 0,
+          "tbtMs": 30,
+          "scriptKiB": 171.1,
+          "lcpElement": "body.min-h-screen > div.bg-gold «تصوّر تجريبي مستقل — غير تابع للموقع الرسمي · المو»",
+          "lcpPhases": {
+            "TTFB": 452,
+            "Load Delay": 0,
+            "Load Time": 0,
+            "Render Delay": 1914
+          }
+        }
+      ]
+    }
+  },
+  "axe": {
+    "/": {
+      "criticalSerious": [],
+      "other": []
+    },
+    "/planner": {
+      "criticalSerious": [],
+      "other": []
+    },
+    "/services": {
+      "criticalSerious": [],
+      "other": []
+    },
+    "/training": {
+      "criticalSerious": [],
+      "other": []
+    },
+    "/activities": {
+      "criticalSerious": [],
+      "other": []
+    },
+    "/contact": {
+      "criticalSerious": [],
+      "other": []
+    },
+    "/opportunities": {
+      "criticalSerious": [],
+      "other": []
+    },
+    "/developer": {
+      "criticalSerious": [],
+      "other": []
+    }
+  }
+}

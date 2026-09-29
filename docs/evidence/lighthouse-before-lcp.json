@@ -1,0 +1,207 @@
+{
+  "label": "before-lcp",
+  "base": "http://localhost:3000",
+  "startedAt": "2026-09-29T14:53:55.877Z",
+  "preset": "Lighthouse mobile default (simulated throttling)",
+  "browser": "chromium-1243/chrome-win64",
+  "routes": {
+    "/": {
+      "median": {
+        "performance": 95,
+        "accessibility": 100,
+        "lcpMs": 2850,
+        "fcpMs": 906,
+        "cls": 0,
+        "tbtMs": 103,
+        "scriptKiB": 177.9
+      },
+      "lcpMsPerRun": [
+        2941,
+        2850,
+        2846
+      ],
+      "lcpElement": "body.min-h-screen > div.bg-gold «تصوّر تجريبي مستقل — غير تابع للموقع الرسمي · المو»",
+      "lcpPhasesRun1": {
+        "TTFB": 454,
+        "Load Delay": 0,
+        "Load Time": 0,
+        "Render Delay": 2487
+      },
+      "runs": [
+        {
+          "file": "runs/before-lcp/home-1-1790693635877.json",
+          "fetchTime": "2026-09-29T14:54:03.352Z",
+          "lighthouse": "12.8.2",
+          "performance": 90,
+          "accessibility": 100,
+          "lcpMs": 2941,
+          "fcpMs": 918,
+          "cls": 0,
+          "tbtMs": 260,
+          "scriptKiB": 177.9,
+          "lcpElement": "body.min-h-screen > div.bg-gold «تصوّر تجريبي مستقل — غير تابع للموقع الرسمي · المو»",
+          "lcpPhases": {
+            "TTFB": 454,
+            "Load Delay": 0,
+            "Load Time": 0,
+            "Render Delay": 2487
+          }
+        },
+        {
+          "file": "runs/before-lcp/home-2-1790693652121.json",
+          "fetchTime": "2026-09-29T14:54:13.989Z",
+          "lighthouse": "12.8.2",
+          "performance": 95,
+          "accessibility": 100,
+          "lcpMs": 2850,
+          "fcpMs": 906,
+          "cls": 0,
+          "tbtMs": 103,
+          "scriptKiB": 177.9,
+          "lcpElement": "body.min-h-screen > div.bg-gold «تصوّر تجريبي مستقل — غير تابع للموقع الرسمي · المو»",
+          "lcpPhases": {
+            "TTFB": 453,
+            "Load Delay": 0,
+            "Load Time": 0,
+            "Render Delay": 2396
+          }
+        },
+        {
+          "file": "runs/before-lcp/home-3-1790693662003.json",
+          "fetchTime": "2026-09-29T14:54:23.815Z",
+          "lighthouse": "12.8.2",
+          "performance": 95,
+          "accessibility": 100,
+          "lcpMs": 2846,
+          "fcpMs": 906,
+          "cls": 0,
+          "tbtMs": 100,
+          "scriptKiB": 177.9,
+          "lcpElement": "body.min-h-screen > div.bg-gold «تصوّر تجريبي مستقل — غير تابع للموقع الرسمي · المو»",
+          "lcpPhases": {
+            "TTFB": 453,
+            "Load Delay": 0,
+            "Load Time": 0,
+            "Render Delay": 2393
+          }
+        }
+      ]
+    },
+    "/planner": {
+      "median": {
+        "performance": 97,
+        "accessibility": 100,
+        "lcpMs": 2654,
+        "fcpMs": 756,
+        "cls": 0,
+        "tbtMs": 44,
+        "scriptKiB": 177.9
+      },
+      "lcpMsPerRun": [
+        2654,
+        2653,
+        2654
+      ],
+      "lcpElement": "body.min-h-screen > div.bg-gold «تصوّر تجريبي مستقل — غير تابع للموقع الرسمي · المو»",
+      "lcpPhasesRun1": {
+        "TTFB": 453,
+        "Load Delay": 0,
+        "Load Time": 0,
+        "Render Delay": 2201
+      },
+      "runs": [
+        {
+          "file": "runs/before-lcp/planner-1-1790693671900.json",
+          "fetchTime": "2026-09-29T14:54:33.710Z",
+          "lighthouse": "12.8.2",
+          "performance": 97,
+          "accessibility": 100,
+          "lcpMs": 2654,
+          "fcpMs": 756,
+          "cls": 0,
+          "tbtMs": 45,
+          "scriptKiB": 177.9,
+          "lcpElement": "body.min-h-screen > div.bg-gold «تصوّر تجريبي مستقل — غير تابع للموقع الرسمي · المو»",
+          "lcpPhases": {
+            "TTFB": 453,
+            "Load Delay": 0,
+            "Load Time": 0,
+            "Render Delay": 2201
+          }
+        },
+        {
+          "file": "runs/before-lcp/planner-2-1790693680615.json",
+          "fetchTime": "2026-09-29T14:54:42.411Z",
+          "lighthouse": "12.8.2",
+          "performance": 97,
+          "accessibility": 100,
+          "lcpMs": 2653,
+          "fcpMs": 756,
+          "cls": 0,
+          "tbtMs": 44,
+          "scriptKiB": 177.9,
+          "lcpElement": "body.min-h-screen > div.bg-gold «تصوّر تجريبي مستقل — غير تابع للموقع الرسمي · المو»",
+          "lcpPhases": {
+            "TTFB": 453,
+            "Load Delay": 0,
+            "Load Time": 0,
+            "Render Delay": 2200
+          }
+        },
+        {
+          "file": "runs/before-lcp/planner-3-1790693689888.json",
+          "fetchTime": "2026-09-29T14:54:51.696Z",
+          "lighthouse": "12.8.2",
+          "performance": 97,
+          "accessibility": 100,
+          "lcpMs": 2654,
+          "fcpMs": 757,
+          "cls": 0,
+          "tbtMs": 44,
+          "scriptKiB": 177.9,
+          "lcpElement": "body.min-h-screen > div.bg-gold «تصوّر تجريبي مستقل — غير تابع للموقع الرسمي · المو»",
+          "lcpPhases": {
+            "TTFB": 453,
+            "Load Delay": 0,
+            "Load Time": 0,
+            "Render Delay": 2201
+          }
+        }
+      ]
+    }
+  },
+  "axe": {
+    "/": {
+      "criticalSerious": [],
+      "other": []
+    },
+    "/planner": {
+      "criticalSerious": [],
+      "other": []
+    },
+    "/services": {
+      "criticalSerious": [],
+      "other": []
+    },
+    "/training": {
+      "criticalSerious": [],
+      "other": []
+    },
+    "/activities": {
+      "criticalSerious": [],
+      "other": []
+    },
+    "/contact": {
+      "criticalSerious": [],
+      "other": []
+    },
+    "/opportunities": {
+      "criticalSerious": [],
+      "other": []
+    },
+    "/developer": {
+      "criticalSerious": [],
+      "other": []
+    }
+  }
+}

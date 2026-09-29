@@ -228,6 +228,14 @@ async function downloadText(p, trigger) {
   ok("explorer: no pressure language", !/سارع|عرض محدود|ينتهي خلال/.test(await p.locator("main").innerText()));
   ok("mobile: tabs reachable, no horizontal overflow", (await p.evaluate(() => document.documentElement.scrollWidth - innerWidth)) <= 0);
   ok("mobile: tap targets ≥44px in wizard/tabs", (await p.getByRole("tab", { name: "التوصيات" }).boundingBox()).height >= 44);
+  // اسم وعنوان طويلان (حتى الحد 60) على عرض 320: لا فيض أفقي والنص كامل في الموجز
+  await p.setViewportSize({ width: 320, height: 700 });
+  const longName = "عبد الرحمن بن محمد الطويل — مؤسسة الأفق للتجارة والخدمات الرقمية".slice(0, 60);
+  await p.getByLabel(/اسمك/).fill(longName + "زيادة تتجاوز الحد");
+  await p.getByLabel("عنوان المسودة (اختياري)").fill("خطة ".repeat(20));
+  const nameVal = await p.getByLabel(/اسمك/).inputValue();
+  ok("long name: capped at 60 chars and shown in brief", nameVal.length === 60 && (await p.locator("[data-brief]").innerText()).includes(nameVal));
+  ok("long name @320px: no horizontal overflow", (await p.evaluate(() => document.documentElement.scrollWidth - innerWidth)) <= 0);
   ok("degraded run: no page errors", errs.length === 0, errs.slice(0, 3).join(" | "));
   await c.close();
 }

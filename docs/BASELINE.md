@@ -29,5 +29,5 @@ Gaps confirmed by reading the code (the handoff pack listed them as candidates):
 
 axe-core 4.13 (WCAG 2.0/2.1 A+AA), 390 px viewport: 0 violations on `/`, `/planner`, `/services`, `/training`, `/activities`, `/contact`.
 
-Raw summary: [`evidence/lighthouse-baseline.json`](evidence/lighthouse-baseline.json).
+Raw summary: [`evidence/lighthouse-baseline.json`](evidence/lighthouse-baseline.json) — measured with an earlier ad-hoc script (Chrome stable, CLI); superseded for LCP work by the validated `npm run measure` baseline `lighthouse-before-lcp.json` (see `PERFORMANCE.md`).
 LCP was already above the 2.5 s project target before this round.
